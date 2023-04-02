@@ -21,3 +21,5 @@ Step #3
 python main.py
 ```
 
+![image](https://user-images.githubusercontent.com/107006539/229378948-da231527-1646-4cf2-91af-7105a6c887e9.png)
+![image](https://user-images.githubusercontent.com/107006539/229379013-0a71c6fb-37e0-47cc-a020-938ae2f106dc.png)
