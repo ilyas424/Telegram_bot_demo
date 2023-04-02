@@ -20,4 +20,7 @@ Step #3
 ```
 python main.py
 ```
-https://photos.app.goo.gl/iTqF1QiMRsrRe4QU8
+https://photos.app.goo.gl/iTqF1QiMRs
+
+![diagram_bot drawio](https://user-images.githubusercontent.com/107006539/229379958-102727b7-392e-45f8-a0a0-9b039362ee3c.png)
+
