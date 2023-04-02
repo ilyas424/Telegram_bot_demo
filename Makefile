@@ -1,6 +1,7 @@
 install:
-		pip install poetry && \
-		poetry install
+		virtualenv -p python3 venv; \
+		source venv/bin/activate; \
+		pip3 install --no-cache -r requirements.txt
 
 start:
-		poetry run python Telegram_bot/main.py
+		python main.py
