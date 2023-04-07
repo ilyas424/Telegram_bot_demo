@@ -7,20 +7,17 @@ import setting
 bot = telebot.TeleBot(setting.TOKEN)
 
 @bot.message_handler(commands=['start'])
-def send_welcome(message):
-    bot.send_message(
-        message.chat.id, "Hello",
-        reply_markup=keyboard()
-    )
-
-
-@bot.message_handler(content_types=['text'])
 def send_anytext(message):
     chat_id = message.chat.id
-    if message.text == 'command':
+    text = 'Выберите команду'
+    bot.send_message(chat_id, text, parse_mode='HTML', reply_markup=balance_key(chat_id))
+
+@bot.message_handler(content_types=['text'])
+def send_call(message):
+    chat_id = message.chat.id
+    if message.text == '@football_tatarlar_Bot':
         text = 'Выберите команду'
         bot.send_message(chat_id, text, parse_mode='HTML', reply_markup=balance_key(chat_id))
-
 
 
 @bot.callback_query_handler(func=lambda message: True)
@@ -28,6 +25,7 @@ def ans(message):
     chat_id = message.message.chat.id
 
     if "Локация" == message.data:
+        bot.answer_callback_query(message.id)
         bot.send_message(chat_id, f"""Адрес:
 Г. Москва, улица Чертановская дом 7 корпус 3. Крытый манеж размеры 73.5 на 36.4
 
@@ -45,6 +43,7 @@ def ans(message):
 
 
     elif "Состав на ближайший четверг" == message.data:
+        bot.answer_callback_query(message.id)
         with open('players.csv', encoding='utf-8') as cvsfile:
             reader = csv.reader(cvsfile)
             spisok = [' '.join(map(str, i)) for i in reader]
@@ -58,6 +57,7 @@ def ans(message):
 
 
     elif message.data == "Я не играю":
+        bot.answer_callback_query(message.id)
         with open('players.csv', encoding='utf-8') as cvsfile:
             reader = csv.reader(cvsfile)
             spisok = [i for i in reader]
@@ -80,6 +80,7 @@ def ans(message):
 
 
     elif message.data == "Я играю":
+            bot.answer_callback_query(message.id)
             with open('players.csv', encoding='utf-8') as csvfile:
                 reader = csv.reader(csvfile)
                 spisok = [i for i in reader]
@@ -99,12 +100,6 @@ def ans(message):
 (Если у тебя не получается, то не забудь нажать кнопку "Я не играю "🙄)
           """)
 
-
-def keyboard():
-    markup = types.ReplyKeyboardMarkup(one_time_keyboard=True, resize_keyboard=True)
-    btn = types.KeyboardButton('command')
-    markup.add(btn)
-    return markup
 
 
 def balance_key(chat_id):
