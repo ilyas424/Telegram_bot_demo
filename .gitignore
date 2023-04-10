@@ -1,4 +1,3 @@
 /**/venv
-setting.py
-dev_bot.py
-players.csv
+settings.py
+data/*

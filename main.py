@@ -2,13 +2,14 @@ import telebot
 from telebot import types
 import csv
 
-import setting
+import settings
 
-bot = telebot.TeleBot(setting.TOKEN)
+bot = telebot.TeleBot(settings.TOKEN)
 
 
 @bot.message_handler(commands=['start'])
 def send_anytext(message):
+    print(message.from_user.id)
     chat_id = message.chat.id
     text = 'Выберите команду'
     bot.send_message(chat_id, text, parse_mode='HTML', reply_markup=list_commands(chat_id))
@@ -16,7 +17,7 @@ def send_anytext(message):
 
 @bot.message_handler(commands=['admin'])
 def is_admin(message):
-    if message.from_user.id in setting.list_admin:
+    if message.from_user.id in settings.list_admin:
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
         btn1 = types.KeyboardButton("Изменить информацию о следующей игре")
         btn2 = types.KeyboardButton("Удалить игрока")
@@ -35,7 +36,7 @@ def send_call(message):
         text = 'Выберите команду'
         bot.send_message(chat_id, text, parse_mode='HTML', reply_markup=list_commands(chat_id))
 
-    if message.text == 'Изменить информацию о следующей игре' and message.from_user.id  in setting.list_admin:
+    if message.text == 'Изменить информацию о следующей игре' and message.from_user.id  in settings.list_admin:
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
         btn1 = types.KeyboardButton("Изменить фото")
         btn2 = types.KeyboardButton("Изменить текст")
@@ -44,8 +45,8 @@ def send_call(message):
         bot.send_message(message.chat.id, text='Что изменить?', reply_markup=markup)
         bot.register_next_step_handler(message, edit_info)
 
-    if message.text == 'Удалить игрока' and message.from_user.id  in setting.list_admin:
-        with open('players.csv', encoding='utf-8') as cvsfile:
+    if message.text == 'Удалить игрока' and message.from_user.id  in settings.list_admin:
+        with open('data/players.csv', encoding='utf-8') as cvsfile:
             reader = csv.reader(cvsfile)
             spisok = [' '.join(map(str, i)) for i in reader]
             spisok_ref = [f'{i + 1}) {spisok[i]}' for i in range(len(spisok))]
@@ -58,12 +59,12 @@ def send_call(message):
                 bot.send_message(message.chat.id, text='введите номер игрока')
                 bot.register_next_step_handler(message, edit_list_players)
 
-    if message.text == 'Обновить список' and message.from_user.id  in setting.list_admin:
-        with open('players.csv', 'w', encoding='utf-8') as cvsfile:
+    if message.text == 'Обновить список' and message.from_user.id  in settings.list_admin:
+        with open('data/players.csv', 'w', encoding='utf-8') as cvsfile:
             csv.reader(cvsfile)
         bot.send_message(message.chat.id, "Список обновлен")
 
-    if message.text == 'Скрыть админку' and message.from_user.id  in setting.list_admin:
+    if message.text == 'Скрыть админку' and message.from_user.id  in settings.list_admin:
         remove = telebot.types.ReplyKeyboardRemove()
         bot.send_message(message.chat.id, 'Скрыл', reply_markup=remove)
 
@@ -89,7 +90,7 @@ def edit_info(message):
 
 def edit_text(message):
     if message.text != '':
-        with open('location.txt', 'w', encoding='utf-8') as file:
+        with open('data/location.txt', 'w', encoding='utf-8') as file:
             file.write(message.text)
         bot.send_message(message.chat.id, 'Сохранил текст')
     else:
@@ -99,20 +100,20 @@ def edit_text(message):
 def edit_photo(message):
     file_info = bot.get_file(message.photo[len(message.photo) - 1].file_id)
     downloaded_file = bot.download_file(file_info.file_path)
-    with open('вход.jpg', 'wb') as new_file:
+    with open('data/image.jpg', 'wb') as new_file:
         new_file.write(downloaded_file)
     bot.send_message(message.chat.id, 'Сохранил фото')
 
 
 def edit_list_players(message):
-    with open('players.csv', encoding='utf-8') as cvsfile:
+    with open('data/players.csv', encoding='utf-8') as cvsfile:
         reader = csv.reader(cvsfile)
         spisok_def = [i for i in reader]
     if message.text != '' and message.text.isdigit() and (
             int(message.text) <= len(spisok_def) and int(message.text) > 0):
         spisok_def.pop(int(message.text) - 1)
 
-        with open('players.csv', 'w', encoding='utf-8', newline='') as cvsfile:
+        with open('data/players.csv', 'w', encoding='utf-8', newline='') as cvsfile:
             writer = csv.writer(cvsfile)
             for line in spisok_def:
                 writer.writerow(line)
@@ -129,20 +130,20 @@ def ans(message):
 
     if "Информация о следующей игре" == message.data:
         bot.answer_callback_query(message.id)
-        with open('location.txt', encoding='utf-8') as file:
+        with open('data/location.txt', encoding='utf-8') as file:
             x = file.read()
         if x != '':
             bot.send_message(chat_id, x)
         else:
             bot.send_message(chat_id, 'Информации пока что нет')
 
-        with open('вход.jpg', 'rb') as photo:
+        with open('data/image.jpg', 'rb') as photo:
             bot.send_photo(chat_id, photo)
 
 
     elif "Состав на ближайщую игру" == message.data:
         bot.answer_callback_query(message.id)
-        with open('players.csv', encoding='utf-8') as cvsfile:
+        with open('data/players.csv', encoding='utf-8') as cvsfile:
             reader = csv.reader(cvsfile)
             spisok = [' '.join(map(str, i)) for i in reader]
             spisok_ref = [f'{i + 1}) {spisok[i]}' for i in range(len(spisok))]
@@ -156,7 +157,7 @@ def ans(message):
 
     elif message.data == "Я не играю":
         bot.answer_callback_query(message.id)
-        with open('players.csv', encoding='utf-8') as cvsfile:
+        with open('data/players.csv', encoding='utf-8') as cvsfile:
             reader = csv.reader(cvsfile)
             spisok = [i for i in reader]
         if [str(message.from_user.id)[:4] + ' ' + message.from_user.first_name
@@ -168,7 +169,7 @@ def ans(message):
                 i for i in spisok if i !=
                                      [str(message.from_user.id)[:4] + ' ' + message.from_user.first_name]
             ]
-            with open('players.csv', 'w', encoding='utf-8', newline='') as cvsfile:
+            with open('data/players.csv', 'w', encoding='utf-8', newline='') as cvsfile:
                 writer = csv.writer(cvsfile)
                 for line in spisok:
                     writer.writerow(line)
@@ -179,7 +180,7 @@ def ans(message):
 
     elif message.data == "Я играю":
         bot.answer_callback_query(message.id)
-        with open('players.csv', encoding='utf-8') as csvfile:
+        with open('data/players.csv', encoding='utf-8') as csvfile:
             reader = csv.reader(csvfile)
             spisok = [i for i in reader]
         if [str(message.from_user.id)[:4] + ' ' + message.from_user.first_name
@@ -188,7 +189,7 @@ def ans(message):
                 chat_id,
                 f"{message.from_user.first_name}, ты уже есть в списке")
         else:
-            with open('players.csv', 'a+', encoding='utf-8',
+            with open('data/players.csv', 'a+', encoding='utf-8',
                       newline='') as csvfile:
                 write = csv.writer(csvfile)
                 write.writerow(
