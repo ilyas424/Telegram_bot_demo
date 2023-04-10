@@ -69,12 +69,14 @@ def send_call(message):
 
 
 def edit_info(message):
+    remove = telebot.types.ReplyKeyboardRemove()
     if message.text == 'Изменить текст':
-        bot.send_message(message.chat.id, text='Введите новую информацию')
+        bot.send_message(message.chat.id, text='Введите новую информацию',reply_markup=remove)
         bot.register_next_step_handler(message, edit_text)
     elif message.text == 'Изменить фото':
-        bot.send_message(message.chat.id, text='Отправте новое фото')
+        bot.send_message(message.chat.id, text='Отправте новое фото', reply_markup=remove)
         bot.register_next_step_handler(message, edit_photo)
+        
     elif message.text == 'Отмена':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
         btn1 = types.KeyboardButton("Изменить информацию о следующей игре")
@@ -89,8 +91,7 @@ def edit_text(message):
     if message.text != '':
         with open('location.txt', 'w', encoding='utf-8') as file:
             file.write(message.text)
-        remove = telebot.types.ReplyKeyboardRemove()
-        bot.send_message(message.chat.id, 'Сохранил текст', reply_markup=remove)
+        bot.send_message(message.chat.id, 'Сохранил текст')
     else:
         bot.send_message(message.chat.id, text=f'данные некорректны')
 
@@ -100,8 +101,7 @@ def edit_photo(message):
     downloaded_file = bot.download_file(file_info.file_path)
     with open('вход.jpg', 'wb') as new_file:
         new_file.write(downloaded_file)
-    remove = telebot.types.ReplyKeyboardRemove()
-    bot.send_message(message.chat.id, 'Сохранил фото', reply_markup=remove)
+    bot.send_message(message.chat.id, 'Сохранил фото')
 
 
 def edit_list_players(message):
