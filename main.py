@@ -16,30 +16,35 @@ def send_anytext(message):
 
 @bot.message_handler(commands=['admin'])
 def is_admin(message):
-    if message.from_user.id == setting.ilyas or message.from_user.id == setting.ilsur:
+    if message.from_user.id in setting.list_admin:
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-        btn1 = types.KeyboardButton("Изменить раздел локация")
+        btn1 = types.KeyboardButton("Изменить информацию о следующей игре")
         btn2 = types.KeyboardButton("Удалить игрока")
         btn3 = types.KeyboardButton("Обновить список")
-        btn4 = types.KeyboardButton("Убрать кнопки")
+        btn4 = types.KeyboardButton("Скрыть админку")
         markup.add(btn1, btn2, btn3, btn4)
-        bot.send_message(message.chat.id, text='Выберите команду', reply_markup=markup)
+        bot.send_message(message.chat.id, text='Приветствую тебя великий админ', reply_markup=markup)
     else:
         bot.send_message(message.chat.id, text='Недостаточно прав доступа')
 
 
-@bot.message_handler(content_types=['text'])
+@bot.message_handler(content_types=['text', 'photo'])
 def send_call(message):
     chat_id = message.chat.id
     if message.text == '@football_tatarlar_Bot':
         text = 'Выберите команду'
         bot.send_message(chat_id, text, parse_mode='HTML', reply_markup=list_commands(chat_id))
 
-    if message.text == 'Изменить раздел локация' and (message.from_user.id == setting.ilyas or message.from_user.id == setting.ilsur):
-        bot.send_message(message.chat.id, text='введите новый текст')
-        bot.register_next_step_handler(message, edit_data)
+    if message.text == 'Изменить информацию о следующей игре' and message.from_user.id  in setting.list_admin:
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
+        btn1 = types.KeyboardButton("Изменить фото")
+        btn2 = types.KeyboardButton("Изменить текст")
+        btn3 = types.KeyboardButton("Отмена")
+        markup.add(btn1, btn2, btn3)
+        bot.send_message(message.chat.id, text='Что изменить?', reply_markup=markup)
+        bot.register_next_step_handler(message, edit_info)
 
-    if message.text == 'Удалить игрока' and (message.from_user.id == setting.ilyas or message.from_user.id == setting.ilsur):
+    if message.text == 'Удалить игрока' and message.from_user.id  in setting.list_admin:
         with open('players.csv', encoding='utf-8') as cvsfile:
             reader = csv.reader(cvsfile)
             spisok = [' '.join(map(str, i)) for i in reader]
@@ -53,30 +58,59 @@ def send_call(message):
                 bot.send_message(message.chat.id, text='введите номер игрока')
                 bot.register_next_step_handler(message, edit_list_players)
 
-    if message.text == 'Обновить список' and (message.from_user.id == setting.ilyas or message.from_user.id == setting.ilsur):
+    if message.text == 'Обновить список' and message.from_user.id  in setting.list_admin:
         with open('players.csv', 'w', encoding='utf-8') as cvsfile:
             csv.reader(cvsfile)
         bot.send_message(message.chat.id, "Список обновлен")
 
-    if message.text == 'Убрать кнопки' and (message.from_user.id == setting.ilyas or message.from_user.id == setting.ilsur):
-        a = telebot.types.ReplyKeyboardRemove()
-        bot.send_message(message.chat.id, 'Убрал', reply_markup=a)
-        
-def edit_data(message):
+    if message.text == 'Скрыть админку' and message.from_user.id  in setting.list_admin:
+        remove = telebot.types.ReplyKeyboardRemove()
+        bot.send_message(message.chat.id, 'Скрыл', reply_markup=remove)
+
+
+def edit_info(message):
+    if message.text == 'Изменить текст':
+        bot.send_message(message.chat.id, text='Введите новую информацию')
+        bot.register_next_step_handler(message, edit_text)
+    elif message.text == 'Изменить фото':
+        bot.send_message(message.chat.id, text='Отправте новое фото')
+        bot.register_next_step_handler(message, edit_photo)
+    elif message.text == 'Отмена':
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
+        btn1 = types.KeyboardButton("Изменить информацию о следующей игре")
+        btn2 = types.KeyboardButton("Удалить игрока")
+        btn3 = types.KeyboardButton("Обновить список")
+        btn4 = types.KeyboardButton("Скрыть админку")
+        markup.add(btn1, btn2, btn3, btn4)
+        bot.send_message(message.chat.id, text='Вернул вас в главное меню', reply_markup=markup)
+
+
+def edit_text(message):
     if message.text != '':
         with open('location.txt', 'w', encoding='utf-8') as file:
             file.write(message.text)
-        bot.send_message(message.chat.id, text=f'сохранил!')
+        remove = telebot.types.ReplyKeyboardRemove()
+        bot.send_message(message.chat.id, 'Сохранил текст', reply_markup=remove)
     else:
-        bot.send_message(message.chat.id, text=f'Вы ничего не ввели')
+        bot.send_message(message.chat.id, text=f'данные некорректны')
+
+
+def edit_photo(message):
+    file_info = bot.get_file(message.photo[len(message.photo) - 1].file_id)
+    downloaded_file = bot.download_file(file_info.file_path)
+    with open('вход.jpg', 'wb') as new_file:
+        new_file.write(downloaded_file)
+    remove = telebot.types.ReplyKeyboardRemove()
+    bot.send_message(message.chat.id, 'Сохранил фото', reply_markup=remove)
 
 
 def edit_list_players(message):
     with open('players.csv', encoding='utf-8') as cvsfile:
         reader = csv.reader(cvsfile)
         spisok_def = [i for i in reader]
-    if message.text != '' and message.text.isdigit() and (int(message.text) <= len(spisok_def) and int(message.text) > 0) :
-        spisok_def.pop(int(message.text)-1)
+    if message.text != '' and message.text.isdigit() and (
+            int(message.text) <= len(spisok_def) and int(message.text) > 0):
+        spisok_def.pop(int(message.text) - 1)
 
         with open('players.csv', 'w', encoding='utf-8', newline='') as cvsfile:
             writer = csv.writer(cvsfile)
@@ -93,7 +127,7 @@ def edit_list_players(message):
 def ans(message):
     chat_id = message.message.chat.id
 
-    if "Локация" == message.data:
+    if "Информация о следующей игре" == message.data:
         bot.answer_callback_query(message.id)
         with open('location.txt', encoding='utf-8') as file:
             x = file.read()
@@ -106,7 +140,7 @@ def ans(message):
             bot.send_photo(chat_id, photo)
 
 
-    elif "Состав на ближайший четверг" == message.data:
+    elif "Состав на ближайщую игру" == message.data:
         bot.answer_callback_query(message.id)
         with open('players.csv', encoding='utf-8') as cvsfile:
             reader = csv.reader(cvsfile)
@@ -167,9 +201,9 @@ def ans(message):
 
 def list_commands(chat_id):
     keyboard = types.InlineKeyboardMarkup()
-    command = ['Локация', 'Я играю', 'Я не играю', 'Состав на ближайший четверг']
+    command = ['Информация о следующей игре', 'Я играю', 'Я не играю', 'Состав на ближайщую игру']
     for i in command:
-        keyboard.add(types.InlineKeyboardButton(text=i, callback_data="{0}".format(i)))
+        keyboard.add(types.InlineKeyboardButton(text=i, callback_data=i))
     return keyboard
 
 
