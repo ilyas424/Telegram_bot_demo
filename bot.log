@@ -1,0 +1,37 @@
+[2023-04-11T22:10:25.862929+0300] INFO: User 179984270 asks for commands
+[2023-04-11T22:11:27.627050+0300] INFO: Text command фыва from User 179984270
+[2023-04-11T22:11:39.828676+0300] INFO: Text command qwd from User 179984270
+[2023-04-11T22:12:05.182081+0300] INFO: Text command 'qwdqwd' from User 179984270
+[2023-04-11T22:12:17.530576+0300] INFO: Text command 'football_tatarlar_Bot' from User 179984270
+[2023-04-11T22:12:27.304171+0300] INFO: Text command '@football_tatarlar_Bot' from User 179984270
+[2023-04-11T22:12:27.306151+0300] INFO: User 179984270 asks for commands
+[2023-04-11T22:12:29.521818+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-11T22:12:36.476253+0300] INFO: User 179984270 asks for commands
+[2023-04-11T22:12:39.699390+0300] INFO: User 179984270 asks for admin commands
+[2023-04-11T22:15:38.994062+0300] INFO: User 179984270 asks for commands
+[2023-04-11T22:15:40.176984+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-11T22:16:06.727847+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-11T22:16:14.823976+0300] INFO: User 179984270 asks for commands
+[2023-04-11T22:16:16.744183+0300] INFO: User 179984270 asks for commands
+[2023-04-11T22:16:17.636503+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-11T22:18:08.948481+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-11T22:18:12.775358+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-11T22:20:45.885466+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-11T22:22:17.884338+0300] INFO: User 179984270 asks for commands
+[2023-04-11T22:22:19.251692+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-11T22:22:23.142880+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-11T22:34:41.651992+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-11T22:35:41.829551+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-11T23:07:55.595797+0300] INFO: User 179984270 asks for commands
+[2023-04-11T23:07:56.708645+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-11T23:07:57.579724+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-11T23:08:01.289077+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-11T23:08:05.702051+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-11T23:10:00.842445+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-11T23:10:03.962866+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-11T23:10:37.178992+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-11T23:10:38.278987+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-11T23:10:39.802269+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-11T23:11:10.046574+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-11T23:11:17.601878+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-11T23:11:19.592376+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
