@@ -1,0 +1,439 @@
+[2023-04-21T17:45:18.096792+0300] INFO: User 415817424 asks for commands
+[2023-04-21T17:45:20.042639+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-21T17:45:28.950321+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T17:45:34.377433+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T17:45:38.062973+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T17:45:40.623742+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T17:45:42.874993+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T17:45:45.027175+0300] INFO: Callback command 'Я не играю' from User 6211124869
+[2023-04-21T17:45:49.020637+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T17:45:52.912017+0300] INFO: Callback command 'Я не играю' from User 6211124869
+[2023-04-21T17:45:56.803315+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T21:40:01.294308+0300] INFO: User 415817424 asks for admin commands
+[2023-04-21T21:40:12.708433+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-21T21:40:21.681812+0300] INFO: Callback command 'Обновить список' from User 6211124869
+[2023-04-21T21:40:25.234025+0300] INFO: User 415817424 asks for commands
+[2023-04-21T21:40:31.379734+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-21T21:40:35.871407+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T21:44:49.412498+0300] INFO: User 415817424 asks for commands
+[2023-04-21T21:44:51.152091+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-21T21:45:18.806555+0300] INFO: User 415817424 asks for commands
+[2023-04-21T21:45:20.341805+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T21:52:20.582651+0300] INFO: User 415817424 asks for admin commands
+[2023-04-21T21:52:21.918142+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T21:59:35.884120+0300] INFO: User 415817424 asks for commands
+[2023-04-21T21:59:39.136605+0300] INFO: User 415817424 asks for commands
+[2023-04-21T21:59:55.101690+0300] INFO: User 415817424 asks for commands
+[2023-04-21T22:00:11.783097+0300] INFO: User 415817424 asks for commands
+[2023-04-21T22:00:20.935032+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:00:25.290929+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:00:31.141016+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T22:03:00.563269+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-21T22:03:51.749284+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:05:05.444370+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:09:19.399474+0300] INFO: User 415817424 asks for commands
+[2023-04-21T22:09:21.115871+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:09:42.688167+0300] INFO: User 415817424 asks for commands
+[2023-04-21T22:09:44.640968+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:10:51.057196+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:11:04.744889+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:11:49.950935+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:11:53.772672+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T22:12:38.531035+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:13:05.127592+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:14:50.279388+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:20:43.892055+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:22:40.407557+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:22:48.872891+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T22:22:51.909844+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:22:54.427060+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T22:23:31.086657+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:26:40.591763+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:27:10.864406+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:28:05.282092+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:29:06.221794+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:29:29.067906+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:29:42.430865+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:30:15.865838+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:32:25.675286+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:33:23.218795+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:34:09.476896+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:35:25.049849+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:35:43.359683+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T22:50:06.858796+0300] INFO: User 415817424 asks for commands
+[2023-04-21T22:50:14.363001+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-21T22:50:34.210914+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T22:50:42.212219+0300] INFO: Callback command 'Я не играю' from User 6211124869
+[2023-04-21T22:58:03.183580+0300] INFO: User 415817424 asks for commands
+[2023-04-21T22:58:05.692548+0300] INFO: User 415817424 asks for admin commands
+[2023-04-21T22:58:07.064355+0300] INFO: Callback command 'Обновить список' from User 6211124869
+[2023-04-21T22:59:01.114458+0300] INFO: Callback command 'Обновить список' from User 6211124869
+[2023-04-21T22:59:06.695912+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T22:59:31.621654+0300] INFO: Callback command 'Я не играю' from User 6211124869
+[2023-04-21T23:00:08.141358+0300] INFO: Callback command 'Я не играю' from User 6211124869
+[2023-04-21T23:06:02.594322+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-21T23:06:07.799055+0300] INFO: User 415817424 asks for commands
+[2023-04-21T23:06:09.983990+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T23:06:11.860179+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T23:06:13.711769+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T23:06:17.366568+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T23:06:23.613753+0300] INFO: Callback command 'Я не играю' from User 6211124869
+[2023-04-21T23:07:03.619528+0300] INFO: Callback command 'Я не играю' from User 6211124869
+[2023-04-21T23:07:07.049218+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T23:07:08.663971+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T23:07:10.291099+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T23:07:12.047321+0300] INFO: Callback command 'Я не играю' from User 6211124869
+[2023-04-21T23:07:13.582574+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-21T23:07:41.120049+0300] INFO: User 415817424 asks for commands
+[2023-04-21T23:07:48.691012+0300] INFO: User 415817424 asks for admin commands
+[2023-04-21T23:14:47.029096+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:19:48.126398+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:20:11.863683+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:20:18.170753+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-21T23:20:25.929586+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:21:25.393609+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:22:16.158970+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:23:17.547151+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:24:10.196576+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:24:26.643604+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:26:07.751812+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:28:15.740487+0300] INFO: Callback command '1) 415817424 Ильяс' from User 6211124869
+[2023-04-21T23:30:57.557604+0300] INFO: User 415817424 asks for commands
+[2023-04-21T23:31:01.003239+0300] INFO: User 415817424 asks for admin commands
+[2023-04-21T23:31:02.368746+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:31:05.293601+0300] INFO: Callback command '1) 415817424 Ильяс' from User 6211124869
+[2023-04-21T23:32:29.132686+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:33:11.776989+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:33:40.509203+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:33:55.250905+0300] INFO: Callback command '1) 415817424 Ильяс' from User 6211124869
+[2023-04-21T23:34:10.663235+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:34:12.648085+0300] INFO: Callback command '1' from User 6211124869
+[2023-04-21T23:46:25.806925+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-21T23:46:46.276565+0300] INFO: Callback command '4' from User 6211124869
+[2023-04-21T23:47:36.949110+0300] INFO: Callback command '1' from User 6211124869
+[2023-04-21T23:47:39.170767+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:03:26.722658+0300] INFO: Text command 'f' from User 415817424
+[2023-04-22T00:11:29.042836+0300] INFO: Callback command '2) 415817424 Ильяс' from User 6211124869
+[2023-04-22T00:11:53.146106+0300] INFO: Callback command 'Я не играю' from User 6211124869
+[2023-04-22T00:12:02.688012+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-22T00:12:15.688293+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:12:24.886722+0300] INFO: Callback command 'Я не играю' from User 6211124869
+[2023-04-22T00:12:35.654715+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-22T00:12:41.736515+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-22T00:12:47.214007+0300] INFO: Callback command '1) 415817424 Ильяс' from User 6211124869
+[2023-04-22T00:19:51.922257+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:20:57.963169+0300] INFO: Callback command '1) 415817424 Ильяс' from User 6211124869
+[2023-04-22T00:20:58.260075+0300] INFO: Callback command '1) 415817424 Ильяс' from User 6211124869
+[2023-04-22T00:21:59.782459+0300] INFO: Callback command '1) 415817424 Ильяс' from User 6211124869
+[2023-04-22T00:22:55.824829+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:23:25.692808+0300] INFO: Callback command '1) 415817424 Ильяс' from User 6211124869
+[2023-04-22T00:23:29.971406+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T00:23:31.086896+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:23:32.241551+0300] INFO: Callback command '1) 415817424 Ильяс' from User 6211124869
+[2023-04-22T00:25:31.399181+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T00:25:32.809269+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:27:43.014422+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:30:40.855018+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:35:47.442359+0300] INFO: Callback command '1) 415817424 Ильяс' from User 6211124869
+[2023-04-22T00:35:49.289766+0300] INFO: Callback command '2) 415817424 Ильяс' from User 6211124869
+[2023-04-22T00:35:52.538717+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T00:35:54.176792+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:35:55.841676+0300] INFO: Callback command '2) 415817424 Ильяс' from User 6211124869
+[2023-04-22T00:35:59.024499+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T00:36:02.931659+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:36:04.614190+0300] INFO: Callback command '1) 415817424 Ильяс' from User 6211124869
+[2023-04-22T00:41:54.191139+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:42:39.460371+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:42:51.240949+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:43:31.583570+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:44:34.566809+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:45:02.517944+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:46:35.683108+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:47:32.675607+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:48:01.521323+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:48:02.801548+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:48:34.959785+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T00:55:54.122822+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T00:56:12.184659+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T00:56:52.386505+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T00:57:12.253567+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T00:57:13.380281+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:57:14.967802+0300] INFO: Callback command '415811424 Ильяс' from User 6211124869
+[2023-04-22T00:57:39.724813+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T00:58:38.585042+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T00:58:40.629799+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T00:59:03.462459+0300] INFO: Callback command '415811424 Ильяс' from User 6211124869
+[2023-04-22T01:01:09.428961+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T01:01:12.941516+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T01:01:20.807723+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T01:01:22.804065+0300] INFO: Callback command '415811424 Ильяс' from User 6211124869
+[2023-04-22T01:02:38.846943+0300] INFO: Callback command '415811424 Ильяс' from User 6211124869
+[2023-04-22T01:03:23.820354+0300] INFO: Callback command '415811424 Ильяс' from User 6211124869
+[2023-04-22T01:03:36.043550+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T01:10:04.867288+0300] INFO: Callback command '415811424 Ильяс' from User 6211124869
+[2023-04-22T01:11:29.773453+0300] INFO: Callback command '415811424 Ильяс' from User 6211124869
+[2023-04-22T01:12:23.940326+0300] INFO: Callback command '415811424 Ильяс' from User 6211124869
+[2023-04-22T01:12:27.436624+0300] INFO: Callback command '415811424 Ильяс' from User 6211124869
+[2023-04-22T01:12:29.233422+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T01:13:41.559532+0300] INFO: Callback command '415811424 Ильяс' from User 6211124869
+[2023-04-22T01:14:23.102829+0300] INFO: Callback command '415811424 Ильяс' from User 6211124869
+[2023-04-22T01:14:26.333771+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T01:14:29.163923+0300] INFO: Callback command 'Обновить список' from User 6211124869
+[2023-04-22T01:14:30.261350+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T01:14:43.259111+0300] WARNING: User 415817424 tried to get admin commands without permissions!
+[2023-04-22T01:14:45.982934+0300] INFO: User 415817424 asks for commands
+[2023-04-22T01:14:49.886097+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-22T01:14:52.021737+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-22T01:14:53.395181+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-22T01:15:17.165606+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T01:15:20.404095+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T01:15:21.802386+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T01:15:25.567978+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T01:15:27.560115+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T01:15:36.971625+0300] INFO: Callback command 'Обновить список' from User 6211124869
+[2023-04-22T01:39:31.574074+0300] INFO: User 415817424 asks for commands
+[2023-04-22T01:39:34.202239+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-22T01:39:36.939295+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T01:39:38.240422+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T01:40:24.527169+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T01:43:03.026714+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T01:44:40.390009+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T01:44:59.945789+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T01:46:20.920569+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T01:49:23.700646+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T01:50:19.834747+0300] INFO: User 415817424 asks for commands
+[2023-04-22T01:50:26.432671+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T01:50:28.225448+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T01:51:19.930059+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-22T01:51:26.833445+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T01:51:28.468410+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T01:56:37.396229+0300] INFO: Callback command ' ' from User 6211124869
+[2023-04-22T01:56:57.083927+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-22T01:57:08.824124+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T01:57:17.628761+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T02:03:44.136001+0300] INFO: User 415817424 asks for commands
+[2023-04-22T02:03:46.575309+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T02:03:51.206685+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T02:03:53.844158+0300] INFO: Callback command ' ' from User 6211124869
+[2023-04-22T02:05:59.261725+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T02:06:00.583734+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T02:06:02.742164+0300] INFO: Callback command ' ' from User 6211124869
+[2023-04-22T02:08:07.058816+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-22T02:08:25.672572+0300] INFO: Callback command ' ' from User 6211124869
+[2023-04-22T02:13:33.690482+0300] INFO: Callback command ' ' from User 6211124869
+[2023-04-22T02:14:16.057405+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T02:14:17.345530+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T02:14:20.563577+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T02:14:22.606258+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T02:14:24.520675+0300] INFO: Callback command 'Обновить список' from User 6211124869
+[2023-04-22T02:15:58.665520+0300] INFO: Callback command 'Изменить фото' from User 6211124869
+[2023-04-22T02:20:29.088453+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T02:20:32.498194+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T02:21:09.887900+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T02:21:11.781350+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T02:21:13.704190+0300] INFO: Callback command 'Изменить фото' from User 6211124869
+[2023-04-22T02:21:15.333456+0300] INFO: Callback command 'Изменить описание' from User 6211124869
+[2023-04-22T02:21:18.424067+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T02:24:37.356359+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T02:26:52.017736+0300] INFO: Callback command 'Изменить фото' from User 6211124869
+[2023-04-22T02:26:53.249461+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T02:27:49.049734+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T02:27:52.461010+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T02:27:53.564029+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T02:27:54.613541+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T02:27:55.683962+0300] INFO: Callback command 'Изменить описание' from User 6211124869
+[2023-04-22T02:27:56.877002+0300] INFO: Callback command 'Изменить фото' from User 6211124869
+[2023-04-22T02:41:34.415304+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T02:41:36.957393+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T02:41:40.815467+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T02:41:42.837816+0300] INFO: User 415817424 asks for commands
+[2023-04-22T02:41:44.301292+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-22T02:41:48.283919+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T02:41:50.292174+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T02:41:55.548695+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T02:41:58.142699+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T02:41:59.370757+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T02:43:11.184859+0300] INFO: User 415817424 asks for commands
+[2023-04-22T02:43:14.280398+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T02:43:22.553062+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T02:43:24.549279+0300] INFO: Callback command 'Изменить фото' from User 6211124869
+[2023-04-22T02:43:26.364760+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T02:43:29.798878+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-22T02:43:32.532657+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T02:43:36.074426+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T02:43:37.529535+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T02:43:39.151856+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T02:43:42.106061+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T02:43:42.972735+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T02:43:45.008311+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T02:43:48.982992+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T02:43:51.010737+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T02:48:14.737201+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T02:48:19.639455+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T02:48:21.177287+0300] INFO: Callback command 'Изменить фото' from User 6211124869
+[2023-04-22T02:53:00.219307+0300] INFO: Text command 'None' from User 415817424
+[2023-04-22T02:57:11.354744+0300] INFO: Text command 'привет' from User 415817424
+[2023-04-22T02:57:26.792201+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T02:57:30.386917+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T02:57:48.253125+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T03:00:08.152443+0300] INFO: Text command 'ff' from User 415817424
+[2023-04-22T03:00:16.834010+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T03:06:15.646929+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T03:06:17.594834+0300] INFO: Callback command 'Изменить фото' from User 6211124869
+[2023-04-22T03:06:25.092397+0300] INFO: Callback command 'Изменить описание' from User 6211124869
+[2023-04-22T03:11:07.206279+0300] INFO: Text command 'None' from User 415817424
+[2023-04-22T03:21:25.906644+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T03:21:27.776121+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T03:21:30.502438+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T03:21:43.415088+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T03:21:46.658808+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T03:21:50.441186+0300] INFO: User 415817424 asks for commands
+[2023-04-22T03:21:51.784065+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-22T03:21:55.509619+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T03:22:02.762960+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T03:22:42.887579+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T03:22:47.163069+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T03:22:49.249795+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T03:22:51.488189+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T03:22:58.205533+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T03:23:02.218045+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T03:23:03.229730+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T03:23:05.853204+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T03:23:07.284341+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T03:25:39.454562+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-22T03:25:42.423586+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T03:25:44.675339+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T03:26:08.996260+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T03:26:18.577944+0300] INFO: Text command 'Изменить описание' from User 415817424
+[2023-04-22T03:31:19.151327+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T03:31:28.666382+0300] INFO: Text command 'Изменить описание' from User 415817424
+[2023-04-22T03:36:31.641209+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T03:36:34.040074+0300] INFO: Text command 'Изменить описание' from User 415817424
+[2023-04-22T03:38:37.050971+0300] INFO: Text command 'Изменить описание' from User 415817424
+[2023-04-22T03:38:43.161234+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T03:40:02.041312+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T03:44:34.015730+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T03:46:08.689657+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T03:46:23.956028+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T03:46:25.117674+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T03:46:28.759882+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T03:46:30.235347+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T03:47:22.473871+0300] INFO: Text command 'Изменить описание' from User 415817424
+[2023-04-22T03:47:30.008370+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T15:05:11.891077+0300] INFO: User 415817424 asks for commands
+[2023-04-22T15:05:14.931623+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-22T15:05:21.070954+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-22T15:05:24.390921+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-22T15:05:34.395309+0300] INFO: Text command 'Скрыть админку' from User 415817424
+[2023-04-22T15:05:47.723605+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T15:05:49.935906+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T15:09:04.624906+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T15:09:06.145495+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T15:19:59.470074+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T15:20:01.371201+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T15:20:06.420198+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T15:20:19.385624+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T15:23:11.144853+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T15:23:12.557312+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T15:28:16.817954+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T15:28:34.799151+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T15:28:36.442380+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T15:28:38.801656+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T15:28:40.697460+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T15:28:42.463339+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T15:28:46.090388+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T15:32:27.520751+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T15:32:33.222920+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T15:32:44.619190+0300] INFO: Text command 'Изменить текст' from User 415817424
+[2023-04-22T15:35:14.908345+0300] INFO: Text command 'Отмена' from User 415817424
+[2023-04-22T15:35:25.379676+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T15:35:27.740404+0300] INFO: Text command 'Изменить текст' from User 415817424
+[2023-04-22T15:35:34.650465+0300] INFO: Text command 'Отмена' from User 415817424
+[2023-04-22T15:35:47.821627+0300] INFO: Text command 'Отмена' from User 415817424
+[2023-04-22T15:36:52.847442+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T15:37:21.733691+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T15:39:59.568764+0300] INFO: Text command 'Изменить текст' from User 415817424
+[2023-04-22T15:41:02.332481+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T15:41:17.837153+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T15:42:15.937540+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T15:43:06.270696+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T15:43:46.682024+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T15:44:57.226870+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T15:46:19.863376+0300] INFO: Text command '/dd' from User 415817424
+[2023-04-22T15:46:24.367793+0300] INFO: Text command 'd' from User 415817424
+[2023-04-22T15:46:43.569711+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T15:46:45.501019+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T15:46:48.498209+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T15:47:14.864944+0300] INFO: User 415817424 asks for commands
+[2023-04-22T15:47:16.308334+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-22T15:47:41.570554+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T15:47:43.399322+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T15:47:45.846983+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T15:48:56.898549+0300] INFO: Text command 'None' from User 415817424
+[2023-04-22T15:49:34.310059+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T15:49:35.491316+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T15:49:37.139959+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T15:55:00.150099+0300] INFO: User 417288488 asks for commands
+[2023-04-22T15:55:01.977496+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
+[2023-04-22T15:55:05.447946+0300] INFO: Callback command 'Состав на ближайшую игру' from User 6211124869
+[2023-04-22T15:55:08.869357+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-22T15:55:13.025424+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-22T15:55:20.438808+0300] INFO: Callback command 'Я не играю' from User 6211124869
+[2023-04-22T15:55:37.498065+0300] INFO: Callback command 'Я не играю' from User 6211124869
+[2023-04-22T15:55:40.126510+0300] INFO: Callback command 'Я не играю' from User 6211124869
+[2023-04-22T15:55:42.106206+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-22T15:55:44.877591+0300] WARNING: User 417288488 tried to get admin commands without permissions!
+[2023-04-22T15:55:51.538451+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T15:55:54.152074+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T15:56:02.727531+0300] INFO: Text command 'Отмена' from User 417288488
+[2023-04-22T15:56:05.514111+0300] INFO: Text command 'Изменить фото' from User 417288488
+[2023-04-22T15:56:05.954333+0300] INFO: Text command 'Изменить текст' from User 417288488
+[2023-04-22T15:56:06.537255+0300] INFO: Text command 'Отмена' from User 417288488
+[2023-04-22T15:56:24.458189+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T15:56:27.698764+0300] INFO: Callback command 'Обновить список' from User 6211124869
+[2023-04-22T15:57:00.351741+0300] INFO: Text command 'Отмена' from User 417288488
+[2023-04-22T15:57:08.350761+0300] INFO: Text command 'Отмена' from User 415817424
+[2023-04-22T15:57:12.544598+0300] WARNING: User 417288488 tried to get admin commands without permissions!
+[2023-04-22T15:57:19.912615+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T15:57:24.319617+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T15:57:26.536423+0300] INFO: Callback command 'Обновить список' from User 6211124869
+[2023-04-22T15:57:31.873467+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T15:57:34.522096+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T15:57:38.283116+0300] INFO: Callback command '417288488 nastusha' from User 6211124869
+[2023-04-22T15:57:41.411318+0300] INFO: Callback command '417288488 nastusha' from User 6211124869
+[2023-04-22T15:57:55.040017+0300] INFO: Callback command '415817424 Ильяс' from User 6211124869
+[2023-04-22T15:59:33.266410+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T15:59:40.584066+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T16:02:33.237748+0300] INFO: User 417288488 asks for commands
+[2023-04-22T16:02:34.781549+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-22T16:02:37.774341+0300] WARNING: User 417288488 tried to get admin commands without permissions!
+[2023-04-22T16:02:42.472074+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T16:02:45.130766+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T16:02:50.036458+0300] INFO: Callback command '417288488 nastusha' from User 6211124869
+[2023-04-22T16:02:54.022041+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T16:03:04.783211+0300] INFO: User 417288488 asks for commands
+[2023-04-22T16:03:05.985917+0300] INFO: Callback command 'Я играю' from User 6211124869
+[2023-04-22T16:03:07.797658+0300] WARNING: User 417288488 tried to get admin commands without permissions!
+[2023-04-22T16:03:10.445048+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T16:03:12.774096+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T16:03:15.279283+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T16:03:17.209811+0300] INFO: Callback command '417288488 nastusha' from User 6211124869
+[2023-04-22T16:03:18.807167+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T16:03:21.719252+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T16:03:26.159968+0300] INFO: Callback command 'Удалить игрока' from User 6211124869
+[2023-04-22T16:03:40.483005+0300] INFO: Callback command '<-- назад' from User 6211124869
+[2023-04-22T16:03:41.926794+0300] INFO: Callback command 'Обновить список' from User 6211124869
+[2023-04-22T16:03:51.627831+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T16:03:54.913752+0300] INFO: Text command 'Изменить текст' from User 417288488
+[2023-04-22T16:03:56.647327+0300] INFO: Text command 'Изменить фото' from User 417288488
+[2023-04-22T16:03:57.933101+0300] INFO: Text command 'Отмена' from User 417288488
+[2023-04-22T16:04:00.452991+0300] INFO: Text command 'Изменить фото' from User 415817424
+[2023-04-22T16:06:11.911629+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T16:06:27.154495+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T16:06:31.025651+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T16:06:34.580913+0300] INFO: Text command 'Изменить текст' from User 415817424
+[2023-04-22T16:06:58.611050+0300] INFO: User 415817424 asks for admin commands
+[2023-04-22T16:06:59.987357+0300] INFO: Callback command 'Изменить инф-цию о следующей игре' from User 6211124869
+[2023-04-22T16:07:01.951818+0300] INFO: Text command 'Изменить текст' from User 415817424
+[2023-04-22T16:07:09.546716+0300] INFO: User 415817424 asks for commands
+[2023-04-22T16:07:11.082476+0300] INFO: Callback command 'Информация о ближайшей игре' from User 6211124869
