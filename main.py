@@ -26,6 +26,8 @@ def get_next_game_info(callback):
                 bot.send_message(callback.message.chat.id, 'Информации нет!')
     except FileNotFoundError:
         bot.send_message(callback.message.chat.id, 'Информации нет!')
+    except IndexError:
+        pass
 
 
 def get_players_list_for_next_game(callback):
@@ -42,6 +44,8 @@ def get_players_list_for_next_game(callback):
                 bot.send_message(callback.message.chat.id, f"Состав на ближайшую игру:\n{players_list}")
     except FileNotFoundError:
         bot.send_message(callback.message.chat.id, 'Состав на ближайшую игру:\n-')
+    except IndexError:
+        pass
 
 
 def vote_i_play(callback):
@@ -56,7 +60,7 @@ def vote_i_play(callback):
     players_list = []
 
     try:
-        with open('data/players.csv', encoding='utf-8', mode="r") as csvfile:
+        with open('data/players.csv', encoding='utf-8', mode="r", newline='') as csvfile:
             reader = csv.reader(csvfile)
             players_list = [{'id': i[0], 'name': i[1]} for i in reader]
             for el in players_list:
@@ -68,6 +72,8 @@ def vote_i_play(callback):
                         f"{callback.from_user.first_name}, ты уже есть в списке"
                     )
     except FileNotFoundError:
+        pass
+    except IndexError:
         pass
 
     players_list.append({
@@ -88,7 +94,7 @@ def vote_i_dont_play(callback):
     players_list = []
 
     try:
-        with open('data/players.csv', encoding='utf-8', mode="r") as csvfile:
+        with open('data/players.csv', encoding='utf-8', mode="r", newline='') as csvfile:
             reader = csv.reader(csvfile)
             players_list = [{'id': i[0], 'name': i[1]} for i in reader]
 
@@ -100,6 +106,8 @@ def vote_i_dont_play(callback):
                     f"{callback.from_user.first_name}, тебя нет в списке"
                 )
     except FileNotFoundError:
+        pass
+    except IndexError:
         pass
 
     players_list.remove({
@@ -138,7 +146,6 @@ def change_next_game_info(callback):
     bot.send_message(callback.message.chat.id, text='Что изменить?', reply_markup=markup)
 
 
-
 def edit_description(message):
     if message.from_user.id in settings.ADMINS_LIST:
         try:
@@ -151,7 +158,7 @@ def edit_description(message):
         except:
             bot.send_message(message.chat.id, 'Что-то пошло не так, процесс прерван')
     else:
-        bot.send_message(message.chat.id, 'Процесс прерван')
+        bot.send_message(message.chat.id, 'Что-то пошло не так, процесс прерван')
 
 
 def edit_photo(message):
@@ -166,6 +173,7 @@ def edit_photo(message):
             bot.send_message(message.chat.id, 'Что-то пошло не так, процесс прерван')
     else:
         bot.send_message(message.chat.id, 'Процесс прерван')
+
 
 def back(callback):
     bot.answer_callback_query(callback.id)
@@ -235,16 +243,19 @@ def players_list_command_delete(callback):
     except FileNotFoundError:
         pass
 
-    players_list.remove({
-        'id': data[0],
-        'name': data[1]
-    })
+    try:
+        players_list.remove({
+            'id': data[0],
+            'name': data[1]
+        })
 
-    with open('data/players.csv', 'w', encoding='utf-8', newline='') as csvfile:
-        writer = csv.writer(csvfile)
-        for player in players_list:
-            writer.writerow([player['id'], player['name']])
-        bot.send_message(callback.message.chat.id, f"{data[1]}, удален из списка")
+        with open('data/players.csv', 'w', encoding='utf-8', newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            for player in players_list:
+                writer.writerow([player['id'], player['name']])
+            bot.send_message(callback.message.chat.id, f"{data[1]}, удален из списка")
+    except ValueError:
+        pass
 
 
 def get_players(players: list):
@@ -273,7 +284,7 @@ def open_admin_commands(message):
 
 @bot.callback_query_handler(func=lambda message: True)
 def process_callback(callback):
-    logger.info(f"Callback command '{callback.data}' from User {callback.message.from_user.id}")
+    logger.info(f"Callback command '{callback.data}' from User {callback.from_user.id}")
     if callback.data in common_commands_with_handlers:
         common_commands_with_handlers[callback.data](callback)
     elif callback.data == 'Изменить инф-цию о следующей игре' and callback.from_user.id in settings.ADMINS_LIST:
@@ -293,7 +304,6 @@ def process_callback(callback):
 def text_message_handler(message):
     logger.info(f"Text command '{message.text}' from User {message.from_user.id}")
     remove = telebot.types.ReplyKeyboardRemove()
-    print(type(message.text))
     if message.text == '@football_tatarlar_Bot':
         open_common_commands(message)
     elif message.text == 'Изменить фото' and message.from_user.id in settings.ADMINS_LIST:
@@ -309,4 +319,4 @@ def text_message_handler(message):
 
 
 if __name__ == '__main__':
-    bot.polling(non_stop=True, interval=0)
+    bot.infinity_polling(timeout=10, long_polling_timeout = 5)
