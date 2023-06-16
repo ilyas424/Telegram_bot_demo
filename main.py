@@ -19,13 +19,13 @@ def get_next_game_info(callback):
         with open('data/location.txt', encoding='utf-8') as file:
             content = file.read()
             if content != '':
-                bot.send_message(callback.message.chat.id, content)
+                bot.send_message(callback.from_user.id, content)
                 with open('data/image.jpg', 'rb') as photo:
-                    bot.send_photo(callback.message.chat.id, photo)
+                    bot.send_photo(callback.from_user.id, photo)
             else:
-                bot.send_message(callback.message.chat.id, 'Информации нет!')
+                bot.send_message(callback.from_user.id, 'Информации нет!')
     except FileNotFoundError:
-        bot.send_message(callback.message.chat.id, 'Информации нет!')
+        bot.send_message(callback.from_user.id, 'Информации нет!')
     except IndexError:
         pass
 
@@ -38,19 +38,19 @@ def get_players_list_for_next_game(callback):
             spisok = [' '.join(map(str, i)) for i in reader]
             players_list = [f'{i + 1}) {spisok[i]}' for i in range(len(spisok))]
             if spisok == []:
-                bot.send_message(callback.message.chat.id, f"Состав на ближайшую игру:\n-")
+                bot.send_message(callback.from_user.id, f"Состав на ближайшую игру:\n-")
             else:
                 players_list = '\n'.join(players_list)
-                bot.send_message(callback.message.chat.id, f"Состав на ближайшую игру:\n{players_list}")
+                bot.send_message(callback.from_user.id, f"Состав на ближайшую игру:\n{players_list}")
     except FileNotFoundError:
-        bot.send_message(callback.message.chat.id, 'Состав на ближайшую игру:\n-')
+        bot.send_message(callback.from_user.id, 'Состав на ближайшую игру:\n-')
     except IndexError:
         pass
 
 
 def vote_i_play(callback):
     bot.answer_callback_query(callback.id)
-    # bot.send_message(callback.message.chat.id, callback.data)
+    # bot.send_message(callback.from_user.id, callback.data)
 
     # сразу формируем список игроков в формате:
     # [{'id':<id>, 'name': <name},...]
@@ -68,7 +68,7 @@ def vote_i_play(callback):
                     # если мы уже в списке, то вызываем return, чтобы дальше не исполнять код!
                     # и тогда дальше можно обойтись без лишних if-ов и т.д.
                     return bot.send_message(
-                        callback.message.chat.id,
+                        callback.from_user.id,
                         f"{callback.from_user.first_name}, ты уже есть в списке"
                     )
     except FileNotFoundError:
@@ -85,7 +85,7 @@ def vote_i_play(callback):
         writer = csv.writer(csvfile)
         for player in players_list:
             writer.writerow([player['id'], player['name']])
-        bot.send_message(callback.message.chat.id, f"{callback.from_user.first_name}, добавлен в список")
+        bot.send_message(callback.from_user.id, f"{callback.from_user.first_name}, добавлен в список")
 
 
 def vote_i_dont_play(callback):
@@ -102,7 +102,7 @@ def vote_i_dont_play(callback):
                 # если мы уже в списке, то вызываем return, чтобы дальше не исполнять код!
                 # и тогда дальше можно обойтись без лишних if-ов и т.д.
                 return bot.send_message(
-                    callback.message.chat.id,
+                    callback.from_user.id,
                     f"{callback.from_user.first_name}, тебя нет в списке"
                 )
     except FileNotFoundError:
@@ -119,7 +119,7 @@ def vote_i_dont_play(callback):
         writer = csv.writer(csvfile)
         for player in players_list:
             writer.writerow([player['id'], player['name']])
-        bot.send_message(callback.message.chat.id, f"{callback.from_user.first_name}, удален из списка")
+        bot.send_message(callback.from_user.id, f"{callback.from_user.first_name}, удален из списка")
 
 
 # Ключ словаря - текстовая команда, занчение по ключу - функция обработчий этой команды
@@ -143,18 +143,18 @@ def change_next_game_info(callback):
     btn2 = types.KeyboardButton("Изменить текст")
     btn3 = types.KeyboardButton("Отмена")
     markup.add(btn1, btn2, btn3)
-    bot.send_message(callback.message.chat.id, text='Что изменить?', reply_markup=markup)
+    bot.send_message(callback.from_user.id, text='Что изменить?', reply_markup=markup)
 
 
 def edit_description(message):
     if message.from_user.id in settings.ADMINS_LIST:
         try:
-            if message.text != '':
+            if message.text != 'Отмена':
                 with open('data/location.txt', 'w', encoding='utf-8') as file:
                     file.write(message.text)
                 bot.send_message(message.chat.id, 'Сохранил текст')
             else:
-                bot.send_message(message.chat.id, text=f'данные некорректны')
+                bot.send_message(message.chat.id, text=f'Процесс прерван')
         except:
             bot.send_message(message.chat.id, 'Что-то пошло не так, процесс прерван')
     else:
@@ -163,21 +163,26 @@ def edit_description(message):
 
 def edit_photo(message):
     if message.from_user.id in settings.ADMINS_LIST:
-        try:
-            file_info = bot.get_file(message.photo[len(message.photo) - 1].file_id)
-            downloaded_file = bot.download_file(file_info.file_path)
-            with open('data/image.jpg', 'wb') as new_file:
-                new_file.write(downloaded_file)
-            bot.send_message(message.chat.id, 'Сохранил фото')
-        except:
-            bot.send_message(message.chat.id, 'Что-то пошло не так, процесс прерван')
+        if message.text != 'Удалить':
+            try:
+                file_info = bot.get_file(message.photo[len(message.photo) - 1].file_id)
+                downloaded_file = bot.download_file(file_info.file_path)
+                with open('data/image.jpg', 'wb') as new_file:
+                    new_file.write(downloaded_file)
+                bot.send_message(message.chat.id, 'Сохранил фото')
+            except:
+                bot.send_message(message.chat.id, 'Что-то пошло не так, процесс прерван')
+        else:
+            with open('data/image.jpg', 'w') as new_file:
+                pass
+            bot.send_message(message.chat.id, 'Фото удалено')
     else:
         bot.send_message(message.chat.id, 'Процесс прерван')
 
 
 def back(callback):
     bot.answer_callback_query(callback.id)
-    bot.edit_message_reply_markup(callback.message.chat.id, callback.message.id,
+    bot.edit_message_reply_markup(callback.from_user.id, callback.message.id,
                                   reply_markup=get_admin_commands_keyboard())
 
 
@@ -190,9 +195,9 @@ def remove_player(callback):
             spisok = [' '.join(map(str, i)) for i in reader]
             players_list = [f'{spisok[i]}' for i in range(len(spisok))]
             if spisok == []:
-                return bot.send_message(callback.message.chat.id, f"Список пуст")
+                return bot.send_message(callback.from_user.id, f"Список пуст")
             else:
-                bot.edit_message_reply_markup(callback.message.chat.id, callback.message.id,
+                bot.edit_message_reply_markup(callback.from_user.id, callback.message.id,
                                               reply_markup=get_players(players_list))
     except FileNotFoundError:
         pass
@@ -203,13 +208,34 @@ def refresh_players_list(callback):
 
     with open('data/players.csv', encoding='utf-8', mode="w") as csvfile:
         csv.reader(csvfile)
-        bot.send_message(callback.message.chat.id, 'Список обновлен')
+        bot.send_message(callback.from_user.id, 'Список обновлен')
+
+def send_message_all_users(callback):
+    bot.answer_callback_query(callback.id)
+    users = []
+
+    with open('data/users.txt', encoding='utf-8') as file:
+        for i in file.readlines():
+            users.append(i.rstrip())
+        for i in users:
+            try:
+                bot.send_message(i, '''Привет!
+
+Мы все тебя ждем в рядах нашей команды!
+
+Не забывай отмечаться, а именно нажимать кнопку "Я играю"
+
+Вся подробная информация о предстоящей игре располагается в разделе "Информация о ближайшей игре"''')
+            except:
+                pass
 
 
 admin_commands_with_handlers = OrderedDict()
 admin_commands_with_handlers["Изменить инф-цию о следующей игре"] = change_next_game_info
 admin_commands_with_handlers["Удалить игрока"] = remove_player
-admin_commands_with_handlers["Обновить список"] = refresh_players_list
+admin_commands_with_handlers["Рассылка сообщения"] = send_message_all_users
+admin_commands_with_handlers["Удалить всех игроков"] = refresh_players_list
+
 
 edit_info_commands_with_handlers = OrderedDict()
 edit_info_commands_with_handlers["<-- назад"] = back
@@ -237,7 +263,7 @@ def players_list_command_delete(callback):
                 # если мы уже в списке, то вызываем return, чтобы дальше не исполнять код!
                 # и тогда дальше можно обойтись без лишних if-ов и т.д.
                 return bot.send_message(
-                    callback.message.chat.id,
+                    callback.from_user.id,
                     f"{callback.from_user.first_name}, скорее всего список устарел"
                 )
     except FileNotFoundError:
@@ -253,7 +279,7 @@ def players_list_command_delete(callback):
             writer = csv.writer(csvfile)
             for player in players_list:
                 writer.writerow([player['id'], player['name']])
-            bot.send_message(callback.message.chat.id, f"{data[1]}, удален из списка")
+            bot.send_message(callback.from_user.id, f"{data[1]}, удален из списка")
     except ValueError:
         pass
 
@@ -296,7 +322,7 @@ def process_callback(callback):
     elif callback.from_user.id in settings.ADMINS_LIST:
         players_list_command_delete(callback)
     else:
-        bot.send_message(callback.message.chat.id,
+        bot.send_message(callback.from_user.id,
                          f'{callback.from_user.first_name}, недостаточно прав для выполнения операции')
 
 
@@ -307,10 +333,10 @@ def text_message_handler(message):
     if message.text == '@football_tatarlar_Bot':
         open_common_commands(message)
     elif message.text == 'Изменить фото' and message.from_user.id in settings.ADMINS_LIST:
-        bot.send_message(message.chat.id, text='Отправьте новое фото', reply_markup=remove)
+        bot.send_message(message.chat.id, text='Отправьте новое фото, если хотите удалить, введите "Удалить"', reply_markup=remove)
         bot.register_next_step_handler(message, edit_photo)
     elif message.text == "Изменить текст" and message.from_user.id in settings.ADMINS_LIST:
-        bot.send_message(message.chat.id, text='Введите новую информацию', reply_markup=remove)
+        bot.send_message(message.chat.id, text='Введите новую информацию , если передумали, введите "Отмена"', reply_markup=remove)
         bot.register_next_step_handler(message, edit_description)
     elif message.text == "Отмена" and message.from_user.id in settings.ADMINS_LIST:
         bot.send_message(message.chat.id, text='Убрал', reply_markup=remove)

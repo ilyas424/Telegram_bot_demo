@@ -1,3 +1,7 @@
 /**/venv
 settings.py
 data/*
+/data/
+/**/__pycache__
+/**/.idea
+/**/.idea
